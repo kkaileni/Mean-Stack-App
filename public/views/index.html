@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="surveyApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Survey Generator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/css/style.css"> <!-- custom styles -->
+
+
+
+
+</head>
+<body  ng-controller="SurveyController">
+<div class="container">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+
+        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+        <ul class="nav navbar-nav">
+            <li><a href="/surveys">surveys</a></li>
+        </ul>
+    </nav>
+
+    <!-- ANGULAR DYNAMIC CONTENT -->
+<!--
+    <div ng-view></div>
+-->
+
+</div>
+<!-- JS -->
+<script src = './libs/angular/angular.min.js'></script>
+<script src="./libs/angular-route/angular-route.min.js"></script>
+
+<!-- ANGULAR CUSTOM -->
+
+<script src="./app.js"></script>
+<script src="./approute.js"></script>
+<script src="./js/controllers/SurveyCtrl.js"></script>
+</body>
+
+</html>
