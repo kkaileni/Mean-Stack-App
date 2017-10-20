@@ -1,9 +1,7 @@
 /**
  * Created by chocky on 9/29/2017.
  */
-// app/routes.js
 
-// grab the nerd model we just created
 var Survey = require('./models/survey');
 
 module.exports = function(app) {
@@ -26,18 +24,7 @@ module.exports = function(app) {
     });
   });
 
-  /*app.post('/api/surveys', function(req, res) {
-    // use mongoose to get all survey in the database
-    Survey.create(function(err, survey) {
 
-      // if there is an error retrieving, send the error.
-      // nothing after res.send(err) will execute
-      if (err)
-        res.send(err);
-
-      res.json(survey); // return all survey in JSON format
-    });
-  });*/
   // route to handle creating goes here (app.post)
   // route to handle delete goes here (app.delete)
 

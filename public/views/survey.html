@@ -1,6 +1,11 @@
 <div class="jumbotron text-center">
 
-    <h1>Nerds and Proud</h1>
 
-    <p>{{ tagline }}</p>
+
+    <p>{{ surveyVm.tagline }}</p>
+
+    <textarea ng-model = 'surveyVm.currQ'></textarea>
+    <button class="btn-primary"  ng-click="surveyVm.addQ(surveyVm.currQ)">Add Question</button>
+
+    <button class="btn-danger"  ng-click="surveyVm.saveQ()">Generate Survey</button>
 </div>

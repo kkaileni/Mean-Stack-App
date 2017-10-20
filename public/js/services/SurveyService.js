@@ -1,25 +1,35 @@
 /**
  * Created by chocky on 9/29/2017.
  */
-// public/js/services/SurveyService.js
-angular.module('SurveyService', []).factory('Survey', ['$http', function($http) {
+// public/js/services/surveyService.js
+angular.module('surveyApp').service('surveyService', ['$http', function($http) {
 
-  return {
-    // call to get all Surveys
-    get : function() {
-      return $http.get('/api/surveys');
-    },
+  var self = this;
+  self.get = get;
+  self.create = create;
+  self.del = del;
+  self.save = save;
+  self.getQues = getQues;
 
-    // these will work when more API routes are defined on the Node side of things
-    // call to POST and create a new survey
-    create : function(surveyData) {
-      return $http.post('/api/surveys', surveyData);
-    },
+  self.qArr = [];
 
-    // call to DELETE a survey
-    delete : function(id) {
-      return $http.delete('/api/surveys/' + id);
-    }
+  function save(arr) {
+    self.qArr = arr;
+  }
+
+  function getQues() {
+    return self.qArr;
+  }
+  function get() {
+    return $http.get('/api/surveys');
+  }
+
+  function create(surveyData) {
+    return $http.post('/api/surveys', surveyData);
+  }
+
+  function del(id) {
+    return $http.delete('/api/surveys/' + id);
   }
 
 }]);

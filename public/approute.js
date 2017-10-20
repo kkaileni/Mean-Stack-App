@@ -5,12 +5,17 @@ angular.module('surveyApp').config(['$routeProvider', '$locationProvider', funct
 
   $routeProvider
     .when('/', {
-      templateUrl: 'views/home.html',
-      controller: 'MainController'
+      templateUrl: 'views/home.html'
     })
     .when('/surveys', {
       templateUrl: 'views/survey.html',
-      controller: 'SurveyController'
+      controller: 'SurveyController',
+      controllerAs: 'surveyVm'
+    })
+    .when('/generateSurvey', {
+      templateUrl: 'views/generateSurvey.html',
+      controller: 'GenController',
+      controllerAs : 'genVm'
     });
 
   $locationProvider.html5Mode(true);
